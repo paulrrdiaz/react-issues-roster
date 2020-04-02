@@ -20,6 +20,7 @@ export const Title = styled("h2")`
   font-weight: 800;
   line-height: 1;
   margin-bottom: 10px;
+  word-break: break-word;
 `;
 
 export const User = styled("a")`
