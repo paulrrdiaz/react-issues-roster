@@ -39,4 +39,4 @@ npm run build
 
 ## TODO
 
-- Add `husky`, `lint-staged`, `leasot`, `prettier` custom commands, and some static test.
+- Add `husky`, `lint-staged`, `leasot`, `prettier`, `stylelint`, `eslint` custom commands, and some static test.
