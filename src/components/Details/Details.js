@@ -3,11 +3,11 @@ import ReactMarkDown from "react-markdown";
 import { Wrapper, Title, User, Label, Body, Button } from "./Details.styles";
 import { Github } from "components/Icons";
 
-export default ({ title, labels, body, url, user: { login, avatar_url, url: userUrl } }) => {
+export default ({ title, labels, body, url, user: { login, avatar_url, html_url } }) => {
   return (
     <Wrapper data-testid="details">
       <Title>{title}</Title>
-      <User href={userUrl} target="_blank">
+      <User href={html_url} target="_blank">
         <img src={avatar_url} alt={login} />
         <h4>{login} has a complaint</h4>
       </User>

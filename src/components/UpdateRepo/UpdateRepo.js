@@ -28,12 +28,12 @@ export default () => {
 
   return (
     <>
-      <form onSubmit={onSubmit}>
+      <form data-testid="update-repo-form" onSubmit={onSubmit}>
         <Label htmlFor="update-repo">Update Repo</Label>
         <div>
           <Input onChange={onChange} value={repository} id="update-repo" type="text" required />
           {error && (
-            <Error>
+            <Error role="alert">
               Do better... <br />
               ProTip: userName/projectName
             </Error>

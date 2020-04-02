@@ -1,11 +1,11 @@
 import React from "react";
 import { Item, List, Label, Empty } from "./List.styles";
 
-export default ({ activeIssue, filteredIssues, onClick }) => {
+export default ({ activeIssue, filteredIssues = [], onClick }) => {
   return (
     <div>
       {filteredIssues.length ? (
-        <List>
+        <List data-testid="list">
           {filteredIssues.map((issue, index) => (
             <Item
               data-index={index}
@@ -16,7 +16,7 @@ export default ({ activeIssue, filteredIssues, onClick }) => {
               <p>{issue.title}</p>
               <div className="flex">
                 {issue.labels.map(label => (
-                  <Label key={label.id} color={label.color}>
+                  <Label role="label" key={label.id} color={label.color}>
                     {label.name}
                   </Label>
                 ))}
@@ -25,7 +25,7 @@ export default ({ activeIssue, filteredIssues, onClick }) => {
           ))}
         </List>
       ) : (
-        <Empty>
+        <Empty data-testid="list-empty">
           <p>No issues for this repo! Good job folk!</p>
         </Empty>
       )}
