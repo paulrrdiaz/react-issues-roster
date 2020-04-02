@@ -18,6 +18,7 @@
     "react-dom": "^16.13.1",
     "react-markdown": "^4.3.1",
     "react-particles-js": "^2.7.1",
+    "react-rewards": "^1.1.1",
     "react-svg": "^11.0.15",
     "styled-map": "^3.3.0"
   },

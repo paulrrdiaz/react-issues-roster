@@ -1,7 +1,8 @@
 import React from "react";
 import { Link, Location } from "@reach/router";
-import { Header, Title } from "./Header.styles";
+import { Header, Title, Nav } from "./Header.styles";
 import { Bug } from "components/Icons";
+import StubbornButton from "components/StubbornButton";
 
 export default () => {
   return (
@@ -14,8 +15,11 @@ export default () => {
                 <Bug color="#fff" width="40px" /> Issues roster
               </Link>
             </Title>
-            <nav>
+            <Nav>
               <ul>
+                <li>
+                  <StubbornButton />
+                </li>
                 <li>
                   <Link
                     state={{
@@ -27,7 +31,7 @@ export default () => {
                   </Link>
                 </li>
               </ul>
-            </nav>
+            </Nav>
           </div>
         </Header>
       )}
