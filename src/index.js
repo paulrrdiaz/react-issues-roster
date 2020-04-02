@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import App from "components/App";
 // import * as serviceWorker from './serviceWorker';
 
-if (process.env.NODE_ENV !== "production") {
+if (process.env.NODE_ENV === "development") {
   const axe = require("react-axe");
   axe(React, ReactDOM, 1000);
 }

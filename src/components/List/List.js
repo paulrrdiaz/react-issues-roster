@@ -1,7 +1,7 @@
 import React from "react";
 import { Item, List, Label, Empty } from "./List.styles";
 
-export default ({ activeIssues, filteredIssues, onClick }) => {
+export default ({ activeIssue, filteredIssues, onClick }) => {
   return (
     <div>
       {filteredIssues.length ? (
@@ -9,7 +9,7 @@ export default ({ activeIssues, filteredIssues, onClick }) => {
           {filteredIssues.map((issue, index) => (
             <Item
               data-index={index}
-              active={index === activeIssues}
+              active={index === activeIssue}
               key={issue.id}
               onClick={onClick}
             >

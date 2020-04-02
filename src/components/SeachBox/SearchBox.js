@@ -31,6 +31,7 @@ export default ({ data: issues = [], currentRepo }) => {
 
   const onKeyDown = e => {
     const { activeIssue, filteredIssues } = state;
+    console.log(e.keyCode);
 
     switch (e.keyCode) {
       case 13: {
@@ -44,6 +45,7 @@ export default ({ data: issues = [], currentRepo }) => {
       }
       case 40: {
         const isLastOne = activeIssue + 1 === filteredIssues.length;
+        console.log(isLastOne);
 
         !isLastOne &&
           dispatch({ type: Types.SET_ACTIVE_ISSUE, payload: { value: activeIssue + 1 } });
@@ -67,7 +69,7 @@ export default ({ data: issues = [], currentRepo }) => {
       <div>
         <Label htmlFor="search-box">
           Do you want some troubles...?
-          <small>Current repo: {currentRepo}</small>
+          <small data-testid="current-repo">Current repo: {currentRepo}</small>
         </Label>
         <div className="relative">
           <Input
@@ -79,7 +81,7 @@ export default ({ data: issues = [], currentRepo }) => {
             onChange={onChange}
           />
           {(showList || showDetails) && (
-            <CloseWrapper onClick={clear}>
+            <CloseWrapper data-testid="search-box-clear" onClick={clear}>
               <Close color="rgb(231, 76, 60)" width="20px" />
             </CloseWrapper>
           )}

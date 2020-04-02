@@ -5,7 +5,7 @@ import { Github } from "components/Icons";
 
 export default ({ title, labels, body, url, user: { login, avatar_url, url: userUrl } }) => {
   return (
-    <Wrapper>
+    <Wrapper data-testid="details">
       <Title>{title}</Title>
       <User href={userUrl} target="_blank">
         <img src={avatar_url} alt={login} />
