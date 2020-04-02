@@ -37,7 +37,11 @@ export const Nav = styled("nav")`
   }
 
   li {
-    > * {
+    text-align: center;
+
+    button,
+    a {
+      ${getFontSize(15)};
       border-radius: 4px;
       padding: 7px 15px;
       text-transform: uppercase;
