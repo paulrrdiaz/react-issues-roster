@@ -3,7 +3,7 @@ import List from "components/List";
 import Details from "components/Details";
 import { Close } from "components/Icons";
 import { Input, Label } from "components/Form";
-import { Types, initialState, reducer, dispatchAll } from "./SearchBoxReducer";
+import { Types, initialState, reducer, dispatchAll } from "./SearchBox.reducer";
 import { CloseWrapper } from "./SearchBox.styles";
 
 export default ({ data: issues = [], currentRepo }) => {

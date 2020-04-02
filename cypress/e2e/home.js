@@ -7,16 +7,9 @@ describe("Home", () => {
 
 describe("Home - Header", () => {
   it("should navigate to '/repo' and update the current repo", () => {
-    const newRepo = "facebook/create-react-app";
     cy.visit("/");
     cy.findByText(/Update repo/i).click();
     cy.url().should("match", /repo/);
-    cy.findByLabelText(/Update Repo/i)
-      .clear()
-      .type(newRepo);
-    cy.findByRole("button").click();
-    cy.url().should("eq", "http://localhost:3000/");
-    cy.findByTestId("current-repo").should("include.text", newRepo);
   });
 });
 
