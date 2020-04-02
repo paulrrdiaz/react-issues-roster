@@ -27,7 +27,9 @@ export default ({ maxCount = 4 }) => {
     isLastOne ? (
       <Link to="/nowhere">Fine! I'll take you to somewhere 🤪</Link>
     ) : (
-      <button onClick={onClick}>{texts[count]}</button>
+      <button type="button" onClick={onClick}>
+        {texts[count]}
+      </button>
     );
 
   return (

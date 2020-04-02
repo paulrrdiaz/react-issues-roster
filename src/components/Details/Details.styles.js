@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import contrast from "contrast";
-import { getFontSize } from "styles/utils";
+import { getFontSize, media } from "styles/utils";
 
 export const Wrapper = styled("div")`
   background-color: rgb(var(--white));
@@ -8,6 +8,10 @@ export const Wrapper = styled("div")`
   padding: 20px 30px;
   margin-top: 20px;
   box-shadow: 0 0 10px 2px rgba(var(--black), 0.05);
+
+  .flex {
+    flex-wrap: wrap;
+  }
 `;
 
 export const Title = styled("h2")`
@@ -38,10 +42,19 @@ export const Label = styled("span")`
   color: ${props =>
     contrast(`#${props.color}`) === "light" ? "rgb(var(--blue))" : "rgb(var(--white))"};
   display: block;
+  margin-bottom: 5px;
+  margin-right: 5px;
   padding: 5px 10px;
 
+  ${media("medium")} {
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+
   & + span {
-    margin-left: 5px;
+    ${media("medium")} {
+      margin-left: 5px;
+    }
   }
 `;
 
@@ -54,6 +67,7 @@ export const Body = styled("div")`
 
   * {
     white-space: pre-line;
+    word-break: break-word;
   }
 `;
 

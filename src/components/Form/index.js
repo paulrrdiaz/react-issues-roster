@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import styledMap from "styled-map";
-import { getFontSize } from "styles/utils";
+import { getFontSize, media } from "styles/utils";
 
 export const Input = styled("input")`
   ${getFontSize(20)};
@@ -30,11 +30,17 @@ export const Label = styled("label")`
   small {
     ${getFontSize(12)};
     font-weight: bold;
-    position: absolute;
-    right: 0;
     text-transform: uppercase;
-    top: 50%;
-    transform: translateY(-50%);
+    display: block;
+    margin-bottom: 5px;
+
+    ${media("medium")} {
+      transform: translateY(-50%);
+      position: absolute;
+      margin-bottom: 0;
+      right: 0;
+      top: 50%;
+    }
   }
 `;
 

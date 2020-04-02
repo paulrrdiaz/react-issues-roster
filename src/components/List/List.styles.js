@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import styledMap from "styled-map";
 import contrast from "contrast";
-import { getFontSize } from "styles/utils";
+import { getFontSize, media } from "styles/utils";
 
 export const List = styled("ul")`
   margin-top: 20px;
@@ -12,6 +12,7 @@ export const Item = styled("li")`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: column;
   background-color: ${styledMap`
     active: rgba(var(--blue), .85);
     default: rgba(var(--white));
@@ -23,6 +24,21 @@ export const Item = styled("li")`
   padding: 12px 15px;
   transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1) 0s;
   z-index: 1;
+
+  .flex {
+    margin-top: 10px;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  ${media("medium")} {
+    flex-direction: row;
+
+    .flex {
+      margin-top: 0;
+      width: auto;
+    }
+  }
 
   &:hover {
     background-color: rgba(var(--blue), 0.85);
@@ -44,10 +60,19 @@ export const Label = styled("span")`
   color: ${props =>
     contrast(`#${props.color}`) === "light" ? "rgb(var(--blue))" : "rgb(var(--white))"};
   display: block;
+  margin-bottom: 5px;
+  margin-right: 5px;
   padding: 5px 10px;
 
+  ${media("medium")} {
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+
   & + span {
-    margin-left: 5px;
+    ${media("medium")} {
+      margin-left: 5px;
+    }
   }
 `;
 

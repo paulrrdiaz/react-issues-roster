@@ -31,7 +31,6 @@ export default ({ data: issues = [], currentRepo }) => {
 
   const onKeyDown = e => {
     const { activeIssue, filteredIssues } = state;
-    console.log(e.keyCode);
 
     switch (e.keyCode) {
       case 13: {
@@ -68,8 +67,8 @@ export default ({ data: issues = [], currentRepo }) => {
     <>
       <div>
         <Label htmlFor="search-box">
-          Do you want some troubles...?
           <small data-testid="current-repo">Current repo: {currentRepo}</small>
+          Do you want some troubles...?
         </Label>
         <div className="relative">
           <Input

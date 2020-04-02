@@ -1,4 +1,5 @@
 import { css } from "@emotion/core";
+import { media } from "styles/utils";
 
 export default css`
   main {
@@ -28,5 +29,14 @@ export default css`
 
   [data-reach-dialog-content] {
     border-radius: 4px;
+    width: 90vw;
+    top: 40%;
+    position: relative;
+    transform: translateY(-50%);
+    margin: 0 auto;
+
+    ${media("medium")} {
+      width: 50vw;
+    }
   }
 `;
