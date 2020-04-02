@@ -79,13 +79,16 @@ export const Label = styled("span")`
 export const Empty = styled("div")`
   ${getFontSize(20)};
   align-items: center;
-  font-weight: 300;
-  justify-content: center;
-  display: flex;
-  border-radius: 4px;
   background-color: rgba(var(--yellow), 0.2);
+  border-radius: 4px;
   border: 1px solid rgb(var(--yellow));
+  display: flex;
+  font-weight: 300;
+  height: 20vh;
+  justify-content: center;
+  line-height: normal;
   margin-top: 20px;
   min-height: 200px;
-  height: 20vh;
+  padding: 20px;
+  text-align: center;
 `;

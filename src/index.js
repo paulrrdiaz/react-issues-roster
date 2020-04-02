@@ -1,7 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "components/App";
+import { documentTitle } from "utils";
 // import * as serviceWorker from './serviceWorker';
+
+documentTitle();
 
 if (process.env.NODE_ENV === "development") {
   const axe = require("react-axe");
