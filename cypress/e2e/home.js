@@ -1,7 +1,7 @@
 describe("Home", () => {
   it("ensure that no svg failed to load", () => {
     cy.visit("/");
-    cy.get("svg").each(svg => expect(svg[0].clientWidth).to.not.equal(0));
+    cy.get("svg:visible").each(svg => expect(svg[0].clientHeight).to.not.equal(0));
   });
 });
 
